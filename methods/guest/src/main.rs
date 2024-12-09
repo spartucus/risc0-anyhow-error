@@ -7,10 +7,10 @@ fn main() {
     let input: u32 = env::read();
 
     // !!! Guest panicked: sys_getenv is disabled; can be enabled with the sys-getenv feature flag on risc0-zkvm-platform !!!
-    // bar_with_anyhow(input).unwrap();
+    bar_with_anyhow(input).unwrap();
 
     // This code works!
-    bar_without_anyhow(input).unwrap();
+    // bar_without_anyhow(input).unwrap();
 
     // write public output to the journal
     env::commit(&input);
